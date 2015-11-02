@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATxmega32D4"</DEVICE>
+ <WORKING_DIR>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAD_DFP\1.0.29\avrasm\inc</DIR>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAD_DFP\1.0.29\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAD_DFP\1.0.29\avrasm\inc\ATxmega32d4def.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAD_DFP\1.0.29\avrasm\inc\ATxmega32D4def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\Debug\AsmPackman.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AsmPackman.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AsmPackman.map</FILE>
+  <FILE>AsmPackman.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <BITWAIT><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>20</LINE></BITWAIT>
+  <START><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>32</LINE></START>
+  <LOOP><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>40</LINE></LOOP>
+  <WAIT350N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>214</LINE></WAIT350N>
+  <WAIT1360N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>185</LINE></WAIT1360N>
+  <WAIT50U><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>170</LINE></WAIT50U>
+  <MAIN><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>167</LINE></MAIN>
+  <WAIT50U_LOOP><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>172</LINE></WAIT50U_LOOP>
+  <WAIT2000N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>178</LINE></WAIT2000N>
+  <WAIT500N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>207</LINE></WAIT500N>
+  <WAIT1200N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>199</LINE></WAIT1200N>
+  <WAIT1300N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>193</LINE></WAIT1300N>
+  <WAIT100N><FILE>C:\Users\Admin\Documents\Atmel Studio\7.0\AsmPackman\AsmPackman\main.asm</FILE><LINE>220</LINE></WAIT100N>
+ </LABELS>
+</ASSEMBLER_INFO>
