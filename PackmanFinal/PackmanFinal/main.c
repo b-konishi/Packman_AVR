@@ -18,9 +18,9 @@
  * DEVIDE:		Signal-Line's devided number
  * CONTROL_LED:	Control LED number for devided number
  */
-#define COLUMN 3
-#define ROW 4
-#define DEVIDE 3
+#define COLUMN 1
+#define ROW 10
+#define DEVIDE 1
 #define CONTROL_LED COLUMN*ROW/DEVIDE
 
 #define FILL_DATA_SIZE 6
@@ -88,7 +88,7 @@ void wait(unsigned int time){
  * *data	
  */
 void HLGenerator(unsigned int port, unsigned char *data) {
-	unsigned int i;
+	unsigned char i;
 	for (i = 0; i < 3; i++) {
 		// 1
 		PORTA.OUT = port;
@@ -137,12 +137,13 @@ void HLGenerator(unsigned int port, unsigned char *data) {
  * *data	data[COLUMN*ROW / DEVIDED]*DEVIDED address
  */
 void send_data(unsigned char *data) {
-	unsigned int i, j;
+	unsigned char i, j;
 	for (i = 0; i < DEVIDE; i++) {
 		for (j = 0; j < CONTROL_LED; j++) {
 			HLGenerator(1<<i, &data[j+CONTROL_LED*i]);
+			_delay_us(50);
 		}
-	} 
+	}
 }
 
 int main(void)
@@ -154,11 +155,7 @@ int main(void)
 	 * GPIO		24 25 26 27 06 07 08 09 10 11 12 13 14 15 16 17 18 19 22 23 04 05
 	 * ARRAY	18 19 20 21 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 00 01
 	 */
-	PORTA.DIR = 0xFF;
-	PORTB.DIR = 0x00;
-	PORTC.DIR = 0x00;
-	PORTD.DIR = 0x00;
-	PORTE.DIR = 0x00;
+	
 	
 	unsigned char check = 0;
 	unsigned char toggle = 0;
@@ -175,9 +172,23 @@ int main(void)
 	unsigned char data[COLUMN*ROW] = {};
 
 	unsigned int count = 0, i;
+	
+	PORTA.DIR = 0xff;
+	PORTB.DIR = 0x00;
+	PORTC.DIR = 0x00;
+	PORTD.DIR = 0x00;
+	PORTE.DIR = 0x00;
+	/*
+	while (1) {
+		unsigned char a[] = {1, 0, 0};
+		HLGenerator(1, a);
+		_delay_ms(1000);
+	}
+	*/
+	
 	while (1) {
 		check = PORTE.IN;
-		if (check == 0b01) {
+		if (0b01 == check) {
 			if (column == (_column = (PORTC.IN & 0b00011111)) && row == (_row = (PORTD.IN & 0b00011111))) {
 				continue;
 			}
@@ -187,7 +198,7 @@ int main(void)
 			
 			data[ROW*(column-1)+(row-1)] = color_data;
 			
-		} else if (check == 0b10) {
+		} else if (0b10 == check) {
 			while (count < COLUMN*ROW/FILL_DATA_SIZE) {
 				if (toggle == (_toggle = (PORTC.IN & 0b10000000 >> 7))) {
 					continue;
